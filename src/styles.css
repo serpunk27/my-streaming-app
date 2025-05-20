@@ -1,0 +1,46 @@
+/* Ajustes globales */
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #0d6efd !important;
+}
+
+.embed-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.5);
+}
+
+footer {
+  background-color: #1f1f1f;
+  font-size: 0.9rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .embed-responsive {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .embed-responsive {
+    height: 600px;
+  }
+}
