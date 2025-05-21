@@ -1,22 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function StreamList({ streams, onSelect, activeUrl }) {
+const StreamList = ({ streams, onSelect, activeUrl }) => {
   return (
-    <ul className="list-group">
-      {streams.map((stream) => (
-        <li
-          key={stream.url}
-          className={`list-group-item ${
-            stream.url === activeUrl ? 'active' : ''
-          }`}
-          style={{ cursor: 'pointer' }}
+    <div className="list-group">
+      {streams.map((stream, index) => (
+        <button
+          key={index}
+          className={`list-group-item ${stream.url === activeUrl ? 'active' : ''}`}
           onClick={() => onSelect(stream.url)}
         >
           {stream.name}
-        </li>
+        </button>
       ))}
-    </ul>
+    </div>
   );
-}
+};
+
+StreamList.propTypes = {
+  streams: PropTypes.array.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  activeUrl: PropTypes.string.isRequired,
+};
 
 export default StreamList;

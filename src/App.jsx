@@ -19,28 +19,24 @@ function App() {
       {/* Header */}
       <nav className="navbar navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Mi Streaming</a>
+          <a className="navbar-brand" href="/">Streaming App</a>
         </div>
       </nav>
 
-      {/* Contenido principal */}
-      <div className="main-container">
-        <div className="row h-100">
-          {/* Reproductor principal */}
-          <div className="col-12 col-lg-8 mb-4 h-100">
+      {/* Main content */}
+      <div className="container-fluid mt-4">
+        <div className="row">
+          <div className="col-12 col-md-8 mb-4">
             <Player url={currentStream} />
           </div>
-          {/* Lista de streams */}
-          <div className="col-12 col-lg-4 h-100">
+          <div className="col-12 col-md-4">
             <StreamList streams={streams} onSelect={setCurrentStream} activeUrl={currentStream} />
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-dark text-white text-center py-3">
-        © 2025 Mi Streaming
-      </footer>
+      <footer>© 2025 Mi Streaming App</footer>
     </>
   );
 }
